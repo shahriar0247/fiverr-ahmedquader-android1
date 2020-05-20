@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$colors: (
+  white1: rgb(238, 238, 238),
+  blue1: rgb(49, 114, 255),
+  black1: #222222,
+  black2: rgba(0, 0, 0, 0.548)
+);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+div{
+  z-index: 1;
+}
+
+.a1,
+.a2,
+.a3 {
+  margin: 0;
+}
+.a1 {
+  padding: 4%;
+}
+.a2 {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+.icon {
+  width: 50%;
+}
+
+.a {
+  padding: 5%;
+}
+.ab input {
+  display: none;
+}
+
+.ad button {
+  color: map-get($map: $colors, $key: blue1);
+  border: 1px solid map-get($map: $colors, $key: blue1);
+  padding: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
+  transition: all 200ms;
+  background: none;
+}
+
+.ad button:hover {
+  color: map-get($map: $colors, $key: white1);
+  background-color: map-get($map: $colors, $key: blue1);
+}
+.b {
+  border: 2px solid rgba(69, 113, 255, 0.281);
+  display: grid;
+  font-size: 90%;
+}
+.ba{
+  margin: 3%;
+  transition: all 200ms;
+position: relative;
+right: 0;
+top:0;
+
+}
+.ba:hover{
+  box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.548);
+  background: rgba(128, 0, 128, 0.664);
+  color: white;
+  right: 4px;
+  top:4px
+}
+.ba img{
+  opacity: 0.8;
+  transition: 200ms all;
+}
+.ba:hover img{
+  opacity: 1;
+}
+.ba_new{
+  background: black;
+}
+@media (max-width: 4000px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 2000px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1800px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1600px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1400px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 950px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 5%;
+  }
+  .a2 {
+    grid-template-rows: 20% 60% 20%;
+    grid-template-columns: 100%;
+  }
+  .ba {
+    padding: 2%;}
+}
+
+@media (max-width: 700px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .b {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.ba {
+  padding: 5%;
+  transition: all 200ms;
+  overflow: visible;
+}
+
+.ba a {
+  text-decoration: none;
+  color: rgb(61, 61, 61);
+}
+
+.filetype {
+  font-size: 80%;
+  color: #222222;
+  margin-left: 1%;
+}
+
+.context-menu {
+  display: none;
+  position: absolute;
+}
+#context-menu-list {
+  background: #f0f0f091;
+  box-shadow: 3px 3px 5px map-get($colors, black2);
+  border: 1px solid map-get($colors, blue1);
+  width: 150px;
+  height: auto;
+  line-height: 2em;
+  cursor: pointer;
+  transition: all 200ms;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+#context-menu-list ul {
+  list-style: none;
+  margin-left: -7%;
+}
+#context-menu-list:hover{
+  background: rgba(255, 255, 255, 0.904);
+  box-shadow: 14px 14px 5px map-get($colors, black2);;
+  top: 10px;
+  right: 10px;
+}
+#context-menu-list ul li:hover {
+  background: map-get($colors, blue1);
+  color: white;
+}
+#context-menu-list ul li {
+  border: 1px solid map-get($colors, blue1);
+  color: map-get($colors, blue1);
+  transition: all 200ms;
+  padding: 5%;
+  padding-left: 20px;
+  margin: 10px;
+  margin-left: -20px;
+ 
+}
+#context-menu-list ul li:hover{
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.548);
+}
+#download-form {
+  display: none;
+}
+
+.menu1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+ padding: 20%;
+  color: white;
+  background: rgba(29, 29, 29, 0.779);
+  display: none;
+  z-index: 10;
+}
+.menu1 .btns p{
+  border: white 1px solid;
+  padding: 1%;
+  width: auto;
+  max-width: 10%;
+  transition: 200ms all
+}
+.menu1 .btns p:hover{
+  background: white;
+  color: black;
+}
+.menu1 #menu1text1 {
+  margin: 2%;
+}
+
+.menu1 .btns p, .menu1 #menu1text2{
+  display: none;
+}

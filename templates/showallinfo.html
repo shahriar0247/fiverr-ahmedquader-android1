@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 7%;
+            padding: 4%;
+            background: #fafafa;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 1px black;
+        }
+        .b { font-family: Arial, Helvetica, sans-serif;
+            margin: 2%;
+            margin-top: 4%;
+            margin-bottom: 4%;
+            padding: 5%;
+            background: #fafafa;
+            border-radius: 20px;
+            box-shadow: 0 0 2px 1px black;}
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        {% for a in all_req %}
+        <div class="b">
+            <h3 class="name">Name</h3>
+            <p class="nameval">{{a[0]}}</p>
+            <h3 class="des">Description</h3>
+            <p class="des_val">{{a[1]}}</p>
+            <h3 class="des">Email</h3>
+            <p class="des_val">{{a[2]}}</p>
+            <h3 class="des">Phone number</h3>
+            <p class="des_val">{{a[3]}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

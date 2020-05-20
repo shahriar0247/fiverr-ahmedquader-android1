@@ -1,0 +1,11 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.b img {
+    margin: 12%;
+    margin-top: 3%;
+    width: 75%;
+}
