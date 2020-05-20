@@ -85,5 +85,17 @@ def showallinfo():
     all_req = cursor.fetchall()
     return render_template("showallinfo.html", all_req=all_req)
 
+@app.route("/user")
+def user():
+    return render_template("user/main.html")
+
+@app.route("/advertising")
+def advertising():
+    return render_template("user/advertising.html")
+@app.route("/design")
+def design():
+    return render_template("user/design.html")
+
+
 if __name__ == "__main__":
     app.run(host='3.1.5.104', port=4200, debug=True)
